@@ -31,6 +31,7 @@ public class PolicyHandler {
         Reserved event = reserved;
         System.out.println("\n\n##### listener Pay : " + reserved + "\n\n");
         // Sample Logic //
+        Payment.pay(event);
 
     }
 
@@ -46,7 +47,7 @@ public class PolicyHandler {
             "\n\n##### listener Refund : " + reservationCanceled + "\n\n"
         );
         // Sample Logic //
-
+        Payment.refund(event);
     }
 }
 //>>> Clean Arch / Inbound Adaptor
