@@ -53,7 +53,7 @@
                             [ Name :  {{data.name }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Owner :  {{data.owner }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Price :  {{data.price }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ PricePerDay :  {{data.pricePerDay }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Rating :  {{data.rating }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
@@ -125,7 +125,7 @@
                 'name': '',
                 'address': '',
                 'owner': '',
-                'price': 0,
+                'pricePerDay': 0,
                 'rating': 0,
             }
         },

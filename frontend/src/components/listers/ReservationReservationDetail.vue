@@ -12,6 +12,9 @@
                 <Number label="LodgingId" v-model="item.lodgingId" :editMode="editMode" @change="change" />
             </div>
             <div>
+                <Number label="PricePerDay" v-model="item.pricePerDay" :editMode="editMode" @change="change" />
+            </div>
+            <div>
                 <Date label="StartDt" v-model="item.startDt" :editMode="editMode" @change="change" />
             </div>
             <div>

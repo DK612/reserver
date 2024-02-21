@@ -68,7 +68,7 @@
                 [
                     { text: "id", value: "id" },
                     { text: "userId", value: "userId" },
-                    { text: "reservationId", value: "reservationId" },
+                    { text: "rodgingId", value: "rodgingId" },
                     { text: "rating", value: "rating" },
                     { text: "detail", value: "detail" },
                 ],
@@ -89,7 +89,7 @@
 
             this.newValue = {
                 'userId': 0,
-                'reservationId': 0,
+                'rodgingId': 0,
                 'rating': 0,
                 'detail': '',
             }

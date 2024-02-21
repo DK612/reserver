@@ -112,7 +112,7 @@
                 'name': '',
                 'address': '',
                 'owner': '',
-                'price': 0,
+                'pricePerDay': 0,
                 'rating': 0,
             }
         },

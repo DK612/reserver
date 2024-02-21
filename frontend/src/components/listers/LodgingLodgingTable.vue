@@ -70,7 +70,7 @@
                     { text: "name", value: "name" },
                     { text: "address", value: "address" },
                     { text: "owner", value: "owner" },
-                    { text: "price", value: "price" },
+                    { text: "pricePerDay", value: "pricePerDay" },
                     { text: "rating", value: "rating" },
                 ],
             lodging : [],
@@ -92,7 +92,7 @@
                 'name': '',
                 'address': '',
                 'owner': '',
-                'price': 0,
+                'pricePerDay': 0,
                 'rating': 0,
             }
         },

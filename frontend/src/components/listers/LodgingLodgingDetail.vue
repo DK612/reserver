@@ -15,7 +15,7 @@
                 <String label="Owner" v-model="item.owner" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="Price" v-model="item.price" :editMode="editMode" @change="change" />
+                <Number label="PricePerDay" v-model="item.pricePerDay" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="Rating" v-model="item.rating" :editMode="editMode" @change="change" />

@@ -24,7 +24,7 @@
                                 Owner :  {{item.owner }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Price :  {{item.price }}
+                                PricePerDay :  {{item.pricePerDay }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Rating :  {{item.rating }}

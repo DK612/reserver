@@ -9,7 +9,7 @@
                 <Number label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="ReservationId" v-model="item.reservationId" :editMode="editMode" @change="change" />
+                <Number label="RodgingId" v-model="item.rodgingId" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="Rating" v-model="item.rating" :editMode="editMode" @change="change" />

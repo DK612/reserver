@@ -50,7 +50,7 @@
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ UserId :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ ReservationId :  {{data.reservationId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ RodgingId :  {{data.rodgingId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Rating :  {{data.rating }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Detail :  {{data.detail }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
@@ -121,7 +121,7 @@
             
             this.newValue = {
                 'userId': 0,
-                'reservationId': 0,
+                'rodgingId': 0,
                 'rating': 0,
                 'detail': '',
             }

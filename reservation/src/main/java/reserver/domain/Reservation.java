@@ -25,6 +25,8 @@ public class Reservation {
 
     private Long lodgingId;
 
+    private Long pricePerDay;
+
     private Date startDt;
 
     private Date endDt;

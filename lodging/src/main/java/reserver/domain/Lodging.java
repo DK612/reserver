@@ -25,7 +25,7 @@ public class Lodging {
 
     private String owner;
 
-    private Long price;
+    private Long pricePerDay;
 
     private Integer rating;
 

@@ -17,7 +17,7 @@
 
         <v-card-text>
             <Number label="UserId" v-model="value.userId" :editMode="editMode" :inputUI="''"/>
-            <Number label="ReservationId" v-model="value.reservationId" :editMode="editMode" :inputUI="''"/>
+            <Number label="RodgingId" v-model="value.rodgingId" :editMode="editMode" :inputUI="''"/>
             <Number label="Rating" v-model="value.rating" :editMode="editMode" :inputUI="''"/>
             <String label="Detail" v-model="value.detail" :editMode="editMode" :inputUI="''"/>
         </v-card-text>

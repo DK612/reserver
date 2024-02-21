@@ -18,7 +18,7 @@
                                 UserId :  {{item.userId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                ReservationId :  {{item.reservationId }}
+                                RodgingId :  {{item.rodgingId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Rating :  {{item.rating }}

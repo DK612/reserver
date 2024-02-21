@@ -18,6 +18,7 @@
         <v-card-text>
             <Number label="UserId" v-model="value.userId" :editMode="editMode" :inputUI="''"/>
             <Number label="LodgingId" v-model="value.lodgingId" :editMode="editMode" :inputUI="''"/>
+            <Number label="PricePerDay" v-model="value.pricePerDay" :editMode="editMode" :inputUI="''"/>
             <Date label="StartDt" v-model="value.startDt" :editMode="editMode" :inputUI="''"/>
             <Date label="EndDt" v-model="value.endDt" :editMode="editMode" :inputUI="''"/>
             <Boolean label="IsChecked" v-model="value.isChecked" :editMode="editMode" :inputUI="''"/>

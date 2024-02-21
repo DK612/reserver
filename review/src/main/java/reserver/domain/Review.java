@@ -20,7 +20,7 @@ public class Review {
 
     private Long userId;
 
-    private Long reservationId;
+    private Long rodgingId;
 
     private Integer rating;
 

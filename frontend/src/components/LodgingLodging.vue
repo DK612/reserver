@@ -19,7 +19,7 @@
             <String label="Name" v-model="value.name" :editMode="editMode" :inputUI="''"/>
             <String label="Address" v-model="value.address" :editMode="editMode" :inputUI="''"/>
             <String label="Owner" v-model="value.owner" :editMode="editMode" :inputUI="''"/>
-            <Number label="Price" v-model="value.price" :editMode="editMode" :inputUI="''"/>
+            <Number label="PricePerDay" v-model="value.pricePerDay" :editMode="editMode" :inputUI="''"/>
             <Number label="Rating" v-model="value.rating" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 

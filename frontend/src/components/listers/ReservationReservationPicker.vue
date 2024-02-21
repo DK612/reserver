@@ -21,6 +21,9 @@
                                 LodgingId :  {{item.lodgingId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
+                                PricePerDay :  {{item.pricePerDay }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
                                 StartDt :  {{item.startDt }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
@@ -80,6 +83,8 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
+                    
+                    
                     
                     
                     

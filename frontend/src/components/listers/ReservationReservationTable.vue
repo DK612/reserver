@@ -69,6 +69,7 @@
                     { text: "id", value: "id" },
                     { text: "userId", value: "userId" },
                     { text: "lodgingId", value: "lodgingId" },
+                    { text: "pricePerDay", value: "pricePerDay" },
                     { text: "startDt", value: "startDt" },
                     { text: "endDt", value: "endDt" },
                     { text: "isChecked", value: "isChecked" },
@@ -91,6 +92,7 @@
             this.newValue = {
                 'userId': 0,
                 'lodgingId': 0,
+                'pricePerDay': 0,
                 'startDt': '2024-02-21',
                 'endDt': '2024-02-21',
                 'isChecked': false,

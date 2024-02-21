@@ -110,7 +110,7 @@
             
             me.newValue = {
                 'userId': 0,
-                'reservationId': 0,
+                'rodgingId': 0,
                 'rating': 0,
                 'detail': '',
             }

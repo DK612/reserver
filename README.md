@@ -36,15 +36,15 @@ mvn spring-boot:run
 ## Test by API
 - review
 ```
- http :8088/reviews id="id" userId="userId" reservationId="reservationId" rating="rating" detail="detail" 
+ http :8088/reviews id="id" userId="userId" rodgingId="rodgingId" rating="rating" detail="detail" 
 ```
 - lodging
 ```
- http :8088/lodgings id="id" name="name" address="address" owner="owner" price="price" rating="rating" 
+ http :8088/lodgings id="id" name="name" address="address" owner="owner" pricePerDay="pricePerDay" rating="rating" 
 ```
 - reservation
 ```
- http :8088/reservations id="id" userId="userId" lodgingId="lodgingId" startDt="StartDt" endDt="endDt" isChecked="isChecked" 
+ http :8088/reservations id="id" userId="userId" lodgingId="lodgingId" pricePerDay="pricePerDay" startDt="startDt" endDt="endDt" isChecked="isChecked" 
 ```
 - payment
 ```
