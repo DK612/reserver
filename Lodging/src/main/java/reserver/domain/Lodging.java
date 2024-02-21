@@ -19,13 +19,11 @@ public class Lodging {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String placeName;
-
-    private String infomation;
+    private String name;
 
     private String address;
 
-    private Long owner;
+    private String owner;
 
     private Long price;
 

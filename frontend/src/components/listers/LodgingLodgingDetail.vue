@@ -6,16 +6,13 @@
 
         <v-card-text>
             <div>
-                <String label="PlaceName" v-model="item.placeName" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <String label="Infomation" v-model="item.infomation" :editMode="editMode" @change="change" />
+                <String label="Name" v-model="item.name" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <String label="Address" v-model="item.address" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="Owner" v-model="item.owner" :editMode="editMode" @change="change" />
+                <String label="Owner" v-model="item.owner" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="Price" v-model="item.price" :editMode="editMode" @change="change" />

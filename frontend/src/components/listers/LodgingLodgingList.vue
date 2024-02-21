@@ -46,13 +46,11 @@
                             
                             
                             
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ PlaceName :  {{data.placeName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Infomation :  {{data.infomation }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Name :  {{data.name }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Owner :  {{data.owner }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Price :  {{data.price }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -124,10 +122,9 @@
             this.values = temp.data._embedded.lodgings;
             
             this.newValue = {
-                'placeName': '',
-                'infomation': '',
+                'name': '',
                 'address': '',
-                'owner': 0,
+                'owner': '',
                 'price': 0,
                 'rating': 0,
             }

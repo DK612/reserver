@@ -109,10 +109,9 @@
             me.values = temp.data._embedded.lodgings;
             
             me.newValue = {
-                'placeName': '',
-                'infomation': '',
+                'name': '',
                 'address': '',
-                'owner': 0,
+                'owner': '',
                 'price': 0,
                 'rating': 0,
             }

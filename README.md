@@ -40,7 +40,7 @@ mvn spring-boot:run
 ```
 - Lodging
 ```
- http :8088/lodgings id="id" placeName="placeName" infomation="infomation" address="address" owner="owner" price="price" rating="rating" 
+ http :8088/lodgings id="id" name="name" address="address" owner="owner" price="price" rating="rating" 
 ```
 - Reservation
 ```

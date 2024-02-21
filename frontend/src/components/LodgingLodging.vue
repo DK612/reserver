@@ -16,10 +16,9 @@
         </v-card-title >        
 
         <v-card-text>
-            <String label="PlaceName" v-model="value.placeName" :editMode="editMode" :inputUI="''"/>
-            <String label="Infomation" v-model="value.infomation" :editMode="editMode" :inputUI="''"/>
+            <String label="Name" v-model="value.name" :editMode="editMode" :inputUI="''"/>
             <String label="Address" v-model="value.address" :editMode="editMode" :inputUI="''"/>
-            <Number label="Owner" v-model="value.owner" :editMode="editMode" :inputUI="''"/>
+            <String label="Owner" v-model="value.owner" :editMode="editMode" :inputUI="''"/>
             <Number label="Price" v-model="value.price" :editMode="editMode" :inputUI="''"/>
             <Number label="Rating" v-model="value.rating" :editMode="editMode" :inputUI="''"/>
         </v-card-text>

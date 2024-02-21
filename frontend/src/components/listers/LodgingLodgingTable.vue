@@ -67,8 +67,7 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "placeName", value: "placeName" },
-                    { text: "infomation", value: "infomation" },
+                    { text: "name", value: "name" },
                     { text: "address", value: "address" },
                     { text: "owner", value: "owner" },
                     { text: "price", value: "price" },
@@ -90,10 +89,9 @@
             this.values = temp.data._embedded.lodgings;
 
             this.newValue = {
-                'placeName': '',
-                'infomation': '',
+                'name': '',
                 'address': '',
-                'owner': 0,
+                'owner': '',
                 'price': 0,
                 'rating': 0,
             }
