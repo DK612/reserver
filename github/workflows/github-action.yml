@@ -29,16 +29,16 @@ jobs:
       
       - name: Build Maven Projects
         run: |
-          mvn clean package -f ./Review/pom.xml
-          mvn clean package -f ./Lodging/pom.xml
-          mvn clean package -f ./Reservation/pom.xml
-          mvn clean package -f ./Payment/pom.xml
-          mvn clean package -f ./Email/pom.xml
+          mvn clean package -f ./review/pom.xml
+          mvn clean package -f ./lodging/pom.xml
+          mvn clean package -f ./reservation/pom.xml
+          mvn clean package -f ./payment/pom.xml
+          mvn clean package -f ./email/pom.xml
 
       - name: Docker Build and push for Review
         uses: docker/build-push-action@v4
         with:
-          context: ./Review
+          context: ./review
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
@@ -48,7 +48,7 @@ jobs:
       - name: Docker Build and push for Lodging
         uses: docker/build-push-action@v4
         with:
-          context: ./Lodging
+          context: ./lodging
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
@@ -58,7 +58,7 @@ jobs:
       - name: Docker Build and push for Reservation
         uses: docker/build-push-action@v4
         with:
-          context: ./Reservation
+          context: ./reservation
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
@@ -68,7 +68,7 @@ jobs:
       - name: Docker Build and push for Payment
         uses: docker/build-push-action@v4
         with:
-          context: ./Payment
+          context: ./payment
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
@@ -78,7 +78,7 @@ jobs:
       - name: Docker Build and push for Email
         uses: docker/build-push-action@v4
         with:
-          context: ./Email
+          context: ./email
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |

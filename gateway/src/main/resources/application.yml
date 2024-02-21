@@ -9,23 +9,23 @@ spring:
     gateway:
 #<<< API Gateway / Routes
       routes:
-        - id: Review
+        - id: review
           uri: http://localhost:8082
           predicates:
             - Path=/reviews/**, 
-        - id: Lodging
+        - id: lodging
           uri: http://localhost:8083
           predicates:
             - Path=/lodgings/**, 
-        - id: Reservation
+        - id: reservation
           uri: http://localhost:8084
           predicates:
             - Path=/reservations/**, 
-        - id: Payment
+        - id: payment
           uri: http://localhost:8085
           predicates:
             - Path=/payments/**, 
-        - id: Email
+        - id: email
           uri: http://localhost:8086
           predicates:
             - Path=/alerts/**, 
@@ -53,23 +53,23 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: Review
+        - id: review
           uri: http://review:8080
           predicates:
             - Path=/reviews/**, 
-        - id: Lodging
+        - id: lodging
           uri: http://lodging:8080
           predicates:
             - Path=/lodgings/**, 
-        - id: Reservation
+        - id: reservation
           uri: http://reservation:8080
           predicates:
             - Path=/reservations/**, 
-        - id: Payment
+        - id: payment
           uri: http://payment:8080
           predicates:
             - Path=/payments/**, 
-        - id: Email
+        - id: email
           uri: http://email:8080
           predicates:
             - Path=/alerts/**, 

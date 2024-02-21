@@ -6,7 +6,6 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import reserver.LodgingApplication;
-import reserver.domain.LodgingRegistered;
 import reserver.domain.RatingUpdated;
 
 @Entity
@@ -19,11 +18,13 @@ public class Lodging {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String name;
+    private String placeName;
+
+    private String infomation;
 
     private String address;
 
-    private String owner;
+    private Long owner;
 
     private Long price;
 
@@ -33,9 +34,6 @@ public class Lodging {
     public void onPostPersist() {
         RatingUpdated ratingUpdated = new RatingUpdated(this);
         ratingUpdated.publishAfterCommit();
-
-        LodgingRegistered lodgingRegistered = new LodgingRegistered(this);
-        lodgingRegistered.publishAfterCommit();
     }
 
     public static LodgingRepository repository() {
@@ -53,8 +51,6 @@ public class Lodging {
         Lodging lodging = new Lodging();
         repository().save(lodging);
 
-        RatingUpdated ratingUpdated = new RatingUpdated(lodging);
-        ratingUpdated.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -64,8 +60,30 @@ public class Lodging {
             lodging // do something
             repository().save(lodging);
 
-            RatingUpdated ratingUpdated = new RatingUpdated(lodging);
-            ratingUpdated.publishAfterCommit();
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void updateAverageRating(ReviewDeleted reviewDeleted) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Lodging lodging = new Lodging();
+        repository().save(lodging);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(reviewDeleted.get???()).ifPresent(lodging->{
+            
+            lodging // do something
+            repository().save(lodging);
+
 
          });
         */

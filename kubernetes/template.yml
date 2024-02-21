@@ -3,22 +3,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Review
+  name: review
   labels:
-    app: Review
+    app: review
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Review
+      app: review
   template:
     metadata:
       labels:
-        app: Review
+        app: review
     spec:
       containers:
-        - name: Review
-          image: username/Review:latest
+        - name: review
+          image: username/review:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -43,22 +43,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Lodging
+  name: lodging
   labels:
-    app: Lodging
+    app: lodging
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Lodging
+      app: lodging
   template:
     metadata:
       labels:
-        app: Lodging
+        app: lodging
     spec:
       containers:
-        - name: Lodging
-          image: username/Lodging:latest
+        - name: lodging
+          image: username/lodging:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -83,22 +83,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Reservation
+  name: reservation
   labels:
-    app: Reservation
+    app: reservation
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Reservation
+      app: reservation
   template:
     metadata:
       labels:
-        app: Reservation
+        app: reservation
     spec:
       containers:
-        - name: Reservation
-          image: username/Reservation:latest
+        - name: reservation
+          image: username/reservation:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -123,22 +123,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Payment
+  name: payment
   labels:
-    app: Payment
+    app: payment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Payment
+      app: payment
   template:
     metadata:
       labels:
-        app: Payment
+        app: payment
     spec:
       containers:
-        - name: Payment
-          image: username/Payment:latest
+        - name: payment
+          image: username/payment:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -163,22 +163,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Email
+  name: email
   labels:
-    app: Email
+    app: email
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Email
+      app: email
   template:
     metadata:
       labels:
-        app: Email
+        app: email
     spec:
       containers:
-        - name: Email
-          image: username/Email:latest
+        - name: email
+          image: username/email:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -205,15 +205,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: Review
+  name: review
   labels:
-    app: Review
+    app: review
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: Review
+    app: review
 
 
 ---
@@ -222,15 +222,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: Lodging
+  name: lodging
   labels:
-    app: Lodging
+    app: lodging
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: Lodging
+    app: lodging
 
 
 ---
@@ -239,15 +239,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: Reservation
+  name: reservation
   labels:
-    app: Reservation
+    app: reservation
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: Reservation
+    app: reservation
 
 
 ---
@@ -256,15 +256,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: Payment
+  name: payment
   labels:
-    app: Payment
+    app: payment
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: Payment
+    app: payment
 
 
 ---
@@ -273,13 +273,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: Email
+  name: email
   labels:
-    app: Email
+    app: email
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: Email
+    app: email
 

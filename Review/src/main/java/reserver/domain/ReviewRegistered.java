@@ -12,14 +12,6 @@ import reserver.infra.AbstractEvent;
 public class ReviewRegistered extends AbstractEvent {
 
     private Long id;
-    private Long userId;
-    private Long reservationId;
-    private Integer rating;
-    private String detail;
-
-    public ReviewRegistered(Review aggregate) {
-        super(aggregate);
-    }
 
     public ReviewRegistered() {
         super();

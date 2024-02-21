@@ -20,11 +20,11 @@ cd /bin
 ## Run the backend micro-services
 See the README.md files inside the each microservices directory:
 
-- Review
-- Lodging
-- Reservation
-- Payment
-- Email
+- review
+- lodging
+- reservation
+- payment
+- email
 
 
 ## Run API Gateway (Spring Gateway)
@@ -34,23 +34,23 @@ mvn spring-boot:run
 ```
 
 ## Test by API
-- Review
+- review
 ```
  http :8088/reviews id="id" userId="userId" reservationId="reservationId" rating="rating" detail="detail" 
 ```
-- Lodging
+- lodging
 ```
  http :8088/lodgings id="id" name="name" address="address" owner="owner" price="price" rating="rating" 
 ```
-- Reservation
+- reservation
 ```
  http :8088/reservations id="id" userId="userId" lodgingId="lodgingId" startDt="StartDt" endDt="endDt" isChecked="isChecked" 
 ```
-- Payment
+- payment
 ```
  http :8088/payments id="id" userId="userId" reservationId="reservationId" amount="amount" payDt="payDt" 
 ```
-- Email
+- email
 ```
  http :8088/alerts id="id" userId="userId" title="title" detail="detail" alertDt="alertDt" 
 ```

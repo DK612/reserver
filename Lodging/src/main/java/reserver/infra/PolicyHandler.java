@@ -40,5 +40,21 @@ public class PolicyHandler {
         // Sample Logic //
         Lodging.updateAverageRating(event);
     }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='ReviewDeleted'"
+    )
+    public void wheneverReviewDeleted_UpdateAverageRating(
+        @Payload ReviewDeleted reviewDeleted
+    ) {
+        ReviewDeleted event = reviewDeleted;
+        System.out.println(
+            "\n\n##### listener UpdateAverageRating : " + reviewDeleted + "\n\n"
+        );
+
+        // Sample Logic //
+        Lodging.updateAverageRating(event);
+    }
 }
 //>>> Clean Arch / Inbound Adaptor
