@@ -9,19 +9,15 @@ import reserver.infra.AbstractEvent;
 //<<< DDD / Domain Event
 @Data
 @ToString
-public class ReviewRegistered extends AbstractEvent {
+public class LodgingRegistered extends AbstractEvent {
 
     private Long id;
-    private Long userId;
-    private Long reservationId;
-    private Integer rating;
-    private String detail;
 
-    public ReviewRegistered(Review aggregate) {
+    public LodgingRegistered(Lodging aggregate) {
         super(aggregate);
     }
 
-    public ReviewRegistered() {
+    public LodgingRegistered() {
         super();
     }
 }

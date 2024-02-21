@@ -40,7 +40,7 @@
                     text
                     @click="save"
                 >
-                저장
+                    RegisterRodging
                 </v-btn>
                 <v-btn
                     color="primary"

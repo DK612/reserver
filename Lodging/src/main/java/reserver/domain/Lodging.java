@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import reserver.LodgingApplication;
+import reserver.domain.LodgingRegistered;
 import reserver.domain.RatingUpdated;
 
 @Entity
@@ -34,6 +35,9 @@ public class Lodging {
     public void onPostPersist() {
         RatingUpdated ratingUpdated = new RatingUpdated(this);
         ratingUpdated.publishAfterCommit();
+
+        LodgingRegistered lodgingRegistered = new LodgingRegistered(this);
+        lodgingRegistered.publishAfterCommit();
     }
 
     public static LodgingRepository repository() {
@@ -51,6 +55,8 @@ public class Lodging {
         Lodging lodging = new Lodging();
         repository().save(lodging);
 
+        RatingUpdated ratingUpdated = new RatingUpdated(lodging);
+        ratingUpdated.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -60,6 +66,8 @@ public class Lodging {
             lodging // do something
             repository().save(lodging);
 
+            RatingUpdated ratingUpdated = new RatingUpdated(lodging);
+            ratingUpdated.publishAfterCommit();
 
          });
         */

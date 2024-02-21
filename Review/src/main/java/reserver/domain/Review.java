@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import reserver.ReviewApplication;
+import reserver.domain.ReviewRegistered;
 
 @Entity
 @Table(name = "Review_table")
@@ -26,7 +27,10 @@ public class Review {
     private String detail;
 
     @PostPersist
-    public void onPostPersist() {}
+    public void onPostPersist() {
+        ReviewRegistered reviewRegistered = new ReviewRegistered(this);
+        reviewRegistered.publishAfterCommit();
+    }
 
     public static ReviewRepository repository() {
         ReviewRepository reviewRepository = ReviewApplication.applicationContext.getBean(
