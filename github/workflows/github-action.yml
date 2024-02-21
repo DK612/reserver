@@ -1,0 +1,87 @@
+name: github-action
+run-name: ${{ github.actor }} is out building GitHub Actions
+
+on:
+  push:
+    # Pattern matched against refs/tags
+    tags:        
+      - '**' 
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Build Maven Projects
+        run: |
+          mvn clean package -f ./Review/pom.xml
+          mvn clean package -f ./Lodging/pom.xml
+          mvn clean package -f ./Reservation/pom.xml
+          mvn clean package -f ./Payment/pom.xml
+          mvn clean package -f ./Email/pom.xml
+
+      - name: Docker Build and push for Review
+        uses: docker/build-push-action@v4
+        with:
+          context: ./Review
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/review:latest
+            ghcr.io/${{ github.repository }}/review:${{ github.ref_name }}
+            
+      - name: Docker Build and push for Lodging
+        uses: docker/build-push-action@v4
+        with:
+          context: ./Lodging
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/lodging:latest
+            ghcr.io/${{ github.repository }}/lodging:${{ github.ref_name }}
+            
+      - name: Docker Build and push for Reservation
+        uses: docker/build-push-action@v4
+        with:
+          context: ./Reservation
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/reservation:latest
+            ghcr.io/${{ github.repository }}/reservation:${{ github.ref_name }}
+            
+      - name: Docker Build and push for Payment
+        uses: docker/build-push-action@v4
+        with:
+          context: ./Payment
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/payment:latest
+            ghcr.io/${{ github.repository }}/payment:${{ github.ref_name }}
+            
+      - name: Docker Build and push for Email
+        uses: docker/build-push-action@v4
+        with:
+          context: ./Email
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/email:latest
+            ghcr.io/${{ github.repository }}/email:${{ github.ref_name }}
+            
