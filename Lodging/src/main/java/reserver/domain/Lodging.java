@@ -65,30 +65,6 @@ public class Lodging {
         */
 
     }
-
-    //>>> Clean Arch / Port Method
-    //<<< Clean Arch / Port Method
-    public static void updateAverageRating(ReviewDeleted reviewDeleted) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        Lodging lodging = new Lodging();
-        repository().save(lodging);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(reviewDeleted.get???()).ifPresent(lodging->{
-            
-            lodging // do something
-            repository().save(lodging);
-
-
-         });
-        */
-
-    }
     //>>> Clean Arch / Port Method
 
 }

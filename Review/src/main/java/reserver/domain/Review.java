@@ -6,7 +6,6 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import reserver.ReviewApplication;
-import reserver.domain.ReviewDeleted;
 
 @Entity
 @Table(name = "Review_table")
@@ -27,10 +26,7 @@ public class Review {
     private String detail;
 
     @PostPersist
-    public void onPostPersist() {
-        ReviewDeleted reviewDeleted = new ReviewDeleted(this);
-        reviewDeleted.publishAfterCommit();
-    }
+    public void onPostPersist() {}
 
     public static ReviewRepository repository() {
         ReviewRepository reviewRepository = ReviewApplication.applicationContext.getBean(
