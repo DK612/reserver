@@ -1,6 +1,7 @@
 package reserver.domain;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
@@ -48,6 +49,11 @@ public class Lodging {
     //<<< Clean Arch / Port Method
     public static void updateAverageRating(ReviewRegistered reviewRegistered) {
         //implement business logic here:
+
+        List ids = new ArrayList<Long>();
+        ids.add(reviewRegistered.getRodgingId());
+        List reviews = (List) repository().findAllById(ids);
+        //int rating = repository().findById(get)
 
         /** Example 1:  new item 
         Lodging lodging = new Lodging();

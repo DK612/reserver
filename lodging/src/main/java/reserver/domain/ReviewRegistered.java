@@ -11,8 +11,7 @@ public class ReviewRegistered extends AbstractEvent {
 
     private Long id;
     private Long userId;
-    private Long reservationId;
+    private Long rodgingId;
     private Integer rating;
     private String detail;
-    private Long rodgingId;
 }
