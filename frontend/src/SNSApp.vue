@@ -84,13 +84,13 @@
 
                     <v-list-item
                         class="px-2"
-                        key="alerts"
-                        to="/emails/alerts"
+                        key="emails"
+                        to="/emails/emails"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        Alert
+                        Email
                     </v-list-item>
 
 
@@ -201,10 +201,10 @@ export default {
                 ImageUrl: '',
             },
             { 
-                title: 'Alert', 
+                title: 'Email', 
                 description: '', 
-                key: 'alerts', 
-                route: '/emails/alerts',
+                key: 'emails', 
+                route: '/emails/emails',
                 ImageUrl: '',
             },
             

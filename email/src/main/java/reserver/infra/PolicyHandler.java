@@ -18,7 +18,7 @@ import reserver.domain.*;
 public class PolicyHandler {
 
     @Autowired
-    AlertRepository alertRepository;
+    EmailRepository emailRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
@@ -36,7 +36,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Alert.sendReviewRemindMail(event);
+        Email.sendReviewRemindMail(event);
     }
 
     @StreamListener(
@@ -50,7 +50,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Alert.sendReserveMail(event);
+        Email.sendReserveMail(event);
     }
 
     @StreamListener(

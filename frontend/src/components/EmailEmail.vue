@@ -9,20 +9,17 @@
         </template>
 
         <v-card-title v-if="value._links">
-            Reservation # {{decode(value._links.self.href.split("/")[value._links.self.href.split("/").length - 1])}}
+            Email # {{decode(value._links.self.href.split("/")[value._links.self.href.split("/").length - 1])}}
         </v-card-title >
         <v-card-title v-else>
-            Reservation
+            Email
         </v-card-title >        
 
         <v-card-text>
             <Number label="UserId" v-model="value.userId" :editMode="editMode" :inputUI="''"/>
-            <Number label="LodgingId" v-model="value.lodgingId" :editMode="editMode" :inputUI="''"/>
-            <Number label="PricePerDay" v-model="value.pricePerDay" :editMode="editMode" :inputUI="''"/>
-            <Date label="StartDt" v-model="value.startDt" :editMode="editMode" :inputUI="''"/>
-            <Date label="EndDt" v-model="value.endDt" :editMode="editMode" :inputUI="''"/>
-            <Boolean label="IsChecked" v-model="value.isChecked" :editMode="editMode" :inputUI="''"/>
-            <Boolean label="IsCanceled" v-model="value.isCanceled" :editMode="editMode" :inputUI="''"/>
+            <String label="Title" v-model="value.title" :editMode="editMode" :inputUI="''"/>
+            <String label="Detail" v-model="value.detail" :editMode="editMode" :inputUI="''"/>
+            <Date label="SendDt" v-model="value.sendDt" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>
@@ -41,7 +38,7 @@
                     text
                     @click="save"
                 >
-                    Reserve
+                저장
                 </v-btn>
                 <v-btn
                     color="primary"
@@ -85,7 +82,7 @@
 
 
     export default {
-        name: 'ReservationReservation',
+        name: 'EmailEmail',
         components:{
         },
         props: {
@@ -140,7 +137,7 @@
 
                     if(!this.offline) {
                         if(this.isNew) {
-                            temp = await axios.post(axios.fixUrl('/reservations'), this.value)
+                            temp = await axios.post(axios.fixUrl('/emails'), this.value)
                         } else {
                             temp = await axios.put(axios.fixUrl(this.value._links.self.href), this.value)
                         }

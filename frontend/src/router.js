@@ -17,8 +17,8 @@ import ReservationReservationDetail from "./components/listers/ReservationReserv
 import PaymentPaymentManager from "./components/listers/PaymentPaymentCards"
 import PaymentPaymentDetail from "./components/listers/PaymentPaymentDetail"
 
-import EmailAlertManager from "./components/listers/EmailAlertCards"
-import EmailAlertDetail from "./components/listers/EmailAlertDetail"
+import EmailEmailManager from "./components/listers/EmailEmailCards"
+import EmailEmailDetail from "./components/listers/EmailEmailDetail"
 
 
 export default new Router({
@@ -70,14 +70,14 @@ export default new Router({
             },
 
             {
-                path: '/emails/alerts',
-                name: 'EmailAlertManager',
-                component: EmailAlertManager
+                path: '/emails/emails',
+                name: 'EmailEmailManager',
+                component: EmailEmailManager
             },
             {
-                path: '/emails/alerts/:id',
-                name: 'EmailAlertDetail',
-                component: EmailAlertDetail
+                path: '/emails/emails/:id',
+                name: 'EmailEmailDetail',
+                component: EmailEmailDetail
             },
 
 

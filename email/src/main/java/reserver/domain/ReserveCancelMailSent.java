@@ -17,7 +17,7 @@ public class ReserveCancelMailSent extends AbstractEvent {
     private String detail;
     private Date alertDt;
 
-    public ReserveCancelMailSent(Alert aggregate) {
+    public ReserveCancelMailSent(Email aggregate) {
         super(aggregate);
     }
 

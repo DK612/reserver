@@ -28,7 +28,7 @@ spring:
         - id: email
           uri: http://localhost:8086
           predicates:
-            - Path=/alerts/**, 
+            - Path=/emails/**, 
         - id: frontend
           uri: http://localhost:8080
           predicates:
@@ -72,7 +72,7 @@ spring:
         - id: email
           uri: http://email:8080
           predicates:
-            - Path=/alerts/**, 
+            - Path=/emails/**, 
         - id: frontend
           uri: http://frontend:8080
           predicates:

@@ -17,7 +17,7 @@ public class ReviewMailSent extends AbstractEvent {
     private String detail;
     private Date alertDt;
 
-    public ReviewMailSent(Alert aggregate) {
+    public ReviewMailSent(Email aggregate) {
         super(aggregate);
     }
 
