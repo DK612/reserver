@@ -30,6 +30,22 @@ public class Payment {
 
     private Date refundDt;
 
+    @PostPersist
+    public void onPostPersist() {
+        Paid paid = new Paid(this);
+        paid.publishAfterCommit();
+
+        PaymentCanceled paymentCanceled = new PaymentCanceled(this);
+        paymentCanceled.publishAfterCommit();
+    }
+
+    public static PaymentRepository repository() {
+        PaymentRepository paymentRepository = PaymentApplication.applicationContext.getBean(
+            PaymentRepository.class
+        );
+        return paymentRepository;
+    }
+
     public static void pay(Reserved reserved) {
         
         Payment payment = new Payment();
@@ -54,24 +70,6 @@ public class Payment {
         payment.setAmount(new BigDecimal(-amount));
         payment.setRefundDt(new Date());
         repository().save(payment);
-    }
-
-
-
-    @PostPersist
-    public void onPostPersist() {
-        Paid paid = new Paid(this);
-        paid.publishAfterCommit();
-
-        PaymentCanceled paymentCanceled = new PaymentCanceled(this);
-        paymentCanceled.publishAfterCommit();
-    }
-
-    public static PaymentRepository repository() {
-        PaymentRepository paymentRepository = PaymentApplication.applicationContext.getBean(
-            PaymentRepository.class
-        );
-        return paymentRepository;
     }
 }
 //>>> DDD / Aggregate Root

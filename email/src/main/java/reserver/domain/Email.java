@@ -30,16 +30,15 @@ public class Email {
 
     @PostPersist
     public void onPostPersist() {
-        ReserveCancelMailSent reserveCancelMailSent = new ReserveCancelMailSent(
-            this
-        );
+
+        ReserveMailSent reserveMailSent = new ReserveMailSent(this);
+        reserveMailSent.publishAfterCommit();
+
+        ReserveCancelMailSent reserveCancelMailSent = new ReserveCancelMailSent(this);
         reserveCancelMailSent.publishAfterCommit();
 
         ReviewMailSent reviewMailSent = new ReviewMailSent(this);
         reviewMailSent.publishAfterCommit();
-
-        ReserveMailSent reserveMailSent = new ReserveMailSent(this);
-        reserveMailSent.publishAfterCommit();
     }
 
     public static EmailRepository repository() {
