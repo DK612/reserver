@@ -49,27 +49,27 @@ public class Reservation {
             
                 reservation.setIsCanceled(this.isCanceled);
                 repository().save(reservation);
-                ReservationCanceled reservationCanceled = new ReservationCanceled(this);
+                ReservationCanceled reservationCanceled = new ReservationCanceled(reservation);
                 reservationCanceled.publishAfterCommit();
              });
         }
 
-        if(this.isChecked == true) {
+        else if(this.isChecked == true) {
             repository().findById(this.getId()).ifPresent(reservation->{
             
                 reservation.setIsChecked(this.isChecked);
                 repository().save(reservation);
-                CheckedIn checkedIn = new CheckedIn(this);
+                CheckedIn checkedIn = new CheckedIn(reservation);
                 checkedIn.publishAfterCommit();
              });
         }
 
-        if(this.isChecked == false) {
+        else if(this.isChecked == false) {
             repository().findById(this.getId()).ifPresent(reservation->{
             
                 reservation.setIsChecked(this.isChecked);
                 repository().save(reservation);
-                CheckedOut checkedOut = new CheckedOut(this);
+                CheckedOut checkedOut = new CheckedOut(reservation);
                 checkedOut.publishAfterCommit();
              });
         }
