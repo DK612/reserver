@@ -30,6 +30,8 @@ public class Lodging {
 
     private Integer rating;
 
+    private Integer reviewCount;
+
     @PostPersist
     public void onPostPersist() {
         RatingUpdated ratingUpdated = new RatingUpdated(this);

@@ -20,6 +20,9 @@
             <div>
                 <Number label="Rating" v-model="item.rating" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Number label="ReviewCount" v-model="item.reviewCount" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

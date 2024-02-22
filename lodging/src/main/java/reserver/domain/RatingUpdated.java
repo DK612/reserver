@@ -13,6 +13,7 @@ public class RatingUpdated extends AbstractEvent {
 
     private Long id;
     private Integer rating;
+    private Integer reviewCount;
 
     public RatingUpdated(Lodging aggregate) {
         super(aggregate);

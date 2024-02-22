@@ -46,6 +46,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -55,6 +56,7 @@
                             [ Owner :  {{data.owner }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PricePerDay :  {{data.pricePerDay }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Rating :  {{data.rating }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ReviewCount :  {{data.reviewCount }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -127,6 +129,7 @@
                 'owner': '',
                 'pricePerDay': 0,
                 'rating': 0,
+                'reviewCount': 0,
             }
         },
         methods: {
