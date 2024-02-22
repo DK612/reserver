@@ -28,6 +28,8 @@ public class Payment {
 
     private Date payDt;
 
+    private Date refundDt;
+
     public static void pay(Reserved reserved) {
         
         Payment payment = new Payment();
@@ -50,7 +52,7 @@ public class Payment {
         Long days = (differenceInMillis / (24 * 60 * 60 * 1000L)) % 365;
         Long amount = reserved.getPricePerDay() * days;
         payment.setAmount(new BigDecimal(-amount));
-        payment.setPayDt(new Date());
+        payment.setRefundDt(new Date());
         repository().save(payment);
     }
 
