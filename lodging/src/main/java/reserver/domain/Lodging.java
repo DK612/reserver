@@ -51,11 +51,17 @@ public class Lodging {
     //<<< Clean Arch / Port Method
     public static void updateAverageRating(ReviewRegistered reviewRegistered) {
         //implement business logic here:
+        repository().findById(reviewRegistered.getLodgingId()).ifPresent(lodging->{
+            Integer countOrigin = lodging.reviewCount; // do something
+            Integer rateOrigin = lodging.rating;
+            Integer totalRateOrigin = countOrigin * rateOrigin;
+            lodging.reviewCount = countOrigin + 1;
+            lodging.rating = Math.round( (totalRateOrigin + reviewRegistered.getRating()) / lodging.reviewCount);
+            repository().save(lodging);
 
-        List ids = new ArrayList<Long>();
-        ids.add(reviewRegistered.getRodgingId());
-        List reviews = (List) repository().findAllById(ids);
-        //int rating = repository().findById(get)
+            RatingUpdated ratingUpdated = new RatingUpdated(lodging);
+            ratingUpdated.publishAfterCommit();
+        });
 
         /** Example 1:  new item 
         Lodging lodging = new Lodging();
