@@ -35,7 +35,7 @@ public class Payment {
         Payment payment = new Payment();
         payment.setUserId(reserved.getUserId());
         payment.setReservationId(reserved.getId());
-        Long differenceInMillis = reserved.getEndDt().getTime() - reserved.getStartDt().getTime()
+        Long differenceInMillis = reserved.getEndDt().getTime() - reserved.getStartDt().getTime();
         Long days = (differenceInMillis / (24 * 60 * 60 * 1000L)) % 365;
         Long amount = reserved.getPricePerDay() * days;
         payment.setAmount(new BigDecimal(amount));
@@ -43,14 +43,14 @@ public class Payment {
         repository().save(payment);
     }
 
-    public static void refund(Reserved reserved) {
+    public static void refund(ReservationCanceled reservationCanceled) {
         
         Payment payment = new Payment();
-        payment.setUserId(reserved.getUserId());
-        payment.setReservationId(reserved.getId());
-        Long differenceInMillis = reserved.getEndDt().getTime() - reserved.getStartDt().getTime()
+        payment.setUserId(reservationCanceled.getUserId());
+        payment.setReservationId(reservationCanceled.getId());
+        Long differenceInMillis = reservationCanceled.getEndDt().getTime() - reservationCanceled.getStartDt().getTime();
         Long days = (differenceInMillis / (24 * 60 * 60 * 1000L)) % 365;
-        Long amount = reserved.getPricePerDay() * days;
+        Long amount = reservationCanceled.getPricePerDay() * days;
         payment.setAmount(new BigDecimal(-amount));
         payment.setRefundDt(new Date());
         repository().save(payment);
