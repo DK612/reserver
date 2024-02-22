@@ -22,10 +22,10 @@
         data: () => ({
             headers: [
                 { text: "id", value: "id" },
-                { text: "userName", value: "userName" },
-                { text: "rodgingName", value: "rodgingName" },
-                { text: "detail", value: "detail" },
+                { text: "userId", value: "userId" },
+                { text: "lodgingId", value: "lodgingId" },
                 { text: "rating", value: "rating" },
+                { text: "detail", value: "detail" },
             ],
             reviewList : [],
         }),
