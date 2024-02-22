@@ -62,7 +62,7 @@ public class Email {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public void sendReserveCancelMail(PaymentCanceled paymentCanceled) {
+    public static void sendReserveCancelMail(PaymentCanceled paymentCanceled) {
         //implement business logic here:
 
         Email email = new Email();
