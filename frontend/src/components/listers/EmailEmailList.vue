@@ -49,7 +49,7 @@
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ UserId :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ UserName :  {{data.userName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Title :  {{data.title }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Detail :  {{data.detail }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ SendDt :  {{data.sendDt }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -120,7 +120,7 @@
             this.values = temp.data._embedded.emails;
             
             this.newValue = {
-                'userId': 0,
+                'userName': '',
                 'title': '',
                 'detail': '',
                 'sendDt': '2024-02-22',

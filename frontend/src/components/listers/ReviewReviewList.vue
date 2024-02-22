@@ -49,7 +49,7 @@
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ UserId :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ UserName :  {{data.userName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ RodgingId :  {{data.rodgingId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Rating :  {{data.rating }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Detail :  {{data.detail }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -120,7 +120,7 @@
             this.values = temp.data._embedded.reviews;
             
             this.newValue = {
-                'userId': 0,
+                'userName': '',
                 'rodgingId': 0,
                 'rating': 0,
                 'detail': '',

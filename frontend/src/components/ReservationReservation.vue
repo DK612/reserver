@@ -16,7 +16,7 @@
         </v-card-title >        
 
         <v-card-text>
-            <Number label="UserId" v-model="value.userId" :editMode="editMode" :inputUI="''"/>
+            <String label="UserName" v-model="value.userName" :editMode="editMode" :inputUI="''"/>
             <Number label="LodgingId" v-model="value.lodgingId" :editMode="editMode" :inputUI="''"/>
             <Number label="PricePerDay" v-model="value.pricePerDay" :editMode="editMode" :inputUI="''"/>
             <Date label="StartDt" v-model="value.startDt" :editMode="editMode" :inputUI="''"/>
