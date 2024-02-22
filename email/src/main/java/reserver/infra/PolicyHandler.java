@@ -67,7 +67,7 @@ public class PolicyHandler {
             "\n\n"
         );
         // Sample Logic //
-
+        Email.sendReserveCancelMail(event);
     }
 }
 //>>> Clean Arch / Inbound Adaptor

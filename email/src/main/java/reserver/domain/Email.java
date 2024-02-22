@@ -52,56 +52,48 @@ public class Email {
     //<<< Clean Arch / Port Method
     public static void sendReviewRemindMail(CheckedOut checkedOut) {
         //implement business logic here:
-
-        /** Example 1:  new item 
         Email email = new Email();
+        email.setUserId(checkedOut.getUserId());
+        email.setTitle("Please write your review.");
+        email.setDetail("Hi " + checkedOut.getUserId() + " Please write your review.");
+        email.setSendDt(new Date());
         repository().save(email);
 
         ReviewMailSent reviewMailSent = new ReviewMailSent(email);
         reviewMailSent.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
         
-        repository().findById(checkedOut.get???()).ifPresent(email->{
-            
-            email // do something
-            repository().save(email);
-
-            ReviewMailSent reviewMailSent = new ReviewMailSent(email);
-            reviewMailSent.publishAfterCommit();
-
-         });
-        */
 
     }
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
+    public static void sendReserveCancelMail(PaymentCanceled paymentCanceled) {
+        //implement business logic here:
+
+        Email email = new Email();
+        email.setUserId(paymentCanceled.getUserId());
+        email.setTitle("Your reservation is canceled completely.");
+        email.setDetail("Hi " + paymentCanceled.getUserId() + " Your reservation is canceled completely.");
+        email.setSendDt(new Date());
+        repository().save(email);
+
+        ReserveCancelMailSent reserveCancelMailSent = new ReserveCancelMailSent(email);
+        reserveCancelMailSent.publishAfterCommit();
+    }
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
     public static void sendReserveMail(Paid paid) {
         //implement business logic here:
 
-        /** Example 1:  new item 
         Email email = new Email();
+        email.setUserId(paid.getUserId());
+        email.setTitle("Your reservation is booked.");
+        email.setDetail("Hi " + paid.getUserId() + " Your reservation is booked.");
+        email.setSendDt(new Date());
         repository().save(email);
 
         ReserveMailSent reserveMailSent = new ReserveMailSent(email);
         reserveMailSent.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(paid.get???()).ifPresent(email->{
-            
-            email // do something
-            repository().save(email);
-
-            ReserveMailSent reserveMailSent = new ReserveMailSent(email);
-            reserveMailSent.publishAfterCommit();
-
-         });
-        */
-
     }
     //>>> Clean Arch / Port Method
 
