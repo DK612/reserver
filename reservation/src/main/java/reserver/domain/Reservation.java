@@ -41,16 +41,38 @@ public class Reservation {
         reserved.publishAfterCommit();
     }
 
-    @PostUpdate
+    @PreUpdate
     public void onPostUpdate() {
-        ReservationCanceled reservationCanceled = new ReservationCanceled(this);
-        reservationCanceled.publishAfterCommit();
 
-        CheckedOut checkedOut = new CheckedOut(this);
-        checkedOut.publishAfterCommit();
+        if(this.isCanceled == true) {
+            repository().findById(this.getId()).ifPresent(reservation->{
+            
+                reservation.setIsCanceled(this.isCanceled);
+                repository().save(reservation);
+                ReservationCanceled reservationCanceled = new ReservationCanceled(this);
+                reservationCanceled.publishAfterCommit();
+             });
+        }
 
-        CheckedIn checkedIn = new CheckedIn(this);
-        checkedIn.publishAfterCommit();
+        if(this.isChecked == true) {
+            repository().findById(this.getId()).ifPresent(reservation->{
+            
+                reservation.setIsChecked(this.isChecked);
+                repository().save(reservation);
+                CheckedIn checkedIn = new CheckedIn(this);
+                checkedIn.publishAfterCommit();
+             });
+        }
+
+        if(this.isChecked == false) {
+            repository().findById(this.getId()).ifPresent(reservation->{
+            
+                reservation.setIsChecked(this.isChecked);
+                repository().save(reservation);
+                CheckedOut checkedOut = new CheckedOut(this);
+                checkedOut.publishAfterCommit();
+             });
+        }
     }
 
     public static ReservationRepository repository() {

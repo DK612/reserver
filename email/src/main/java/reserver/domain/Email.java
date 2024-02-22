@@ -28,19 +28,6 @@ public class Email {
 
     private Date sendDt;
 
-    @PostPersist
-    public void onPostPersist() {
-
-        ReserveMailSent reserveMailSent = new ReserveMailSent(this);
-        reserveMailSent.publishAfterCommit();
-
-        ReserveCancelMailSent reserveCancelMailSent = new ReserveCancelMailSent(this);
-        reserveCancelMailSent.publishAfterCommit();
-
-        ReviewMailSent reviewMailSent = new ReviewMailSent(this);
-        reviewMailSent.publishAfterCommit();
-    }
-
     public static EmailRepository repository() {
         EmailRepository emailRepository = EmailApplication.applicationContext.getBean(
             EmailRepository.class
@@ -49,6 +36,7 @@ public class Email {
     }
 
     //<<< Clean Arch / Port Method
+    @PostPersist
     public static void sendReviewRemindMail(CheckedOut checkedOut) {
         //implement business logic here:
         Email email = new Email();
@@ -66,6 +54,7 @@ public class Email {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
+    @PostPersist
     public static void sendReserveCancelMail(PaymentCanceled paymentCanceled) {
         //implement business logic here:
 
@@ -81,6 +70,7 @@ public class Email {
     }
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
+    @PostPersist
     public static void sendReserveMail(Paid paid) {
         //implement business logic here:
 
