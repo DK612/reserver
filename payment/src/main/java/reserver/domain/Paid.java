@@ -19,10 +19,6 @@ public class Paid extends AbstractEvent {
     private Date payDt;
     private Date refundDt;
 
-    public Paid(Payment aggregate) {
-        super(aggregate);
-    }
-
     public Paid() {
         super();
     }
