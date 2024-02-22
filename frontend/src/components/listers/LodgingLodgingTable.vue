@@ -72,6 +72,7 @@
                     { text: "owner", value: "owner" },
                     { text: "pricePerDay", value: "pricePerDay" },
                     { text: "rating", value: "rating" },
+                    { text: "reviewCount", value: "reviewCount" },
                 ],
             lodging : [],
             newValue: {},
@@ -94,6 +95,7 @@
                 'owner': '',
                 'pricePerDay': 0,
                 'rating': 0,
+                'reviewCount': 0,
             }
         },
         methods: {

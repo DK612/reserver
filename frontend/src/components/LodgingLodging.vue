@@ -21,6 +21,7 @@
             <String label="Owner" v-model="value.owner" :editMode="editMode" :inputUI="''"/>
             <Number label="PricePerDay" v-model="value.pricePerDay" :editMode="editMode" :inputUI="''"/>
             <Number label="Rating" v-model="value.rating" :editMode="editMode" :inputUI="''"/>
+            <Number label="ReviewCount" v-model="value.reviewCount" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>
