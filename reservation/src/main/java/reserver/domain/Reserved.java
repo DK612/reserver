@@ -14,11 +14,11 @@ public class Reserved extends AbstractEvent {
     private Long id;
     private Long userId;
     private Long lodgingId;
-    private Date startDt;
-    private Date endDt;
     private Long pricePerDay;
     private Date startDt;
+    private Date endDt;
     private Boolean isChecked;
+    private Boolean isCanceled;
 
     public Reserved(Reservation aggregate) {
         super(aggregate);
