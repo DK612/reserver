@@ -67,7 +67,7 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "userId", value: "userId" },
+                    { text: "userName", value: "userName" },
                     { text: "reservationId", value: "reservationId" },
                     { text: "amount", value: "amount" },
                     { text: "payDt", value: "payDt" },
@@ -89,7 +89,7 @@
             this.values = temp.data._embedded.payments;
 
             this.newValue = {
-                'userId': 0,
+                'userName': '',
                 'reservationId': 0,
                 'amount': '',
                 'payDt': '2024-02-22',

@@ -67,7 +67,7 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "userId", value: "userId" },
+                    { text: "userName", value: "userName" },
                     { text: "title", value: "title" },
                     { text: "detail", value: "detail" },
                     { text: "sendDt", value: "sendDt" },
@@ -88,7 +88,7 @@
             this.values = temp.data._embedded.emails;
 
             this.newValue = {
-                'userId': 0,
+                'userName': '',
                 'title': '',
                 'detail': '',
                 'sendDt': '2024-02-22',

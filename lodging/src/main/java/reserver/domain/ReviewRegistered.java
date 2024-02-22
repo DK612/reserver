@@ -10,7 +10,7 @@ import reserver.infra.AbstractEvent;
 public class ReviewRegistered extends AbstractEvent {
 
     private Long id;
-    private Long userId;
+    private String userName;
     private Long lodgingId;
     private Integer rating;
     private String detail;

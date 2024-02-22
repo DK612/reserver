@@ -109,7 +109,7 @@
             me.values = temp.data._embedded.payments;
             
             me.newValue = {
-                'userId': 0,
+                'userName': '',
                 'reservationId': 0,
                 'amount': '',
                 'payDt': '2024-02-22',

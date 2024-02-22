@@ -109,7 +109,7 @@
             me.values = temp.data._embedded.emails;
             
             me.newValue = {
-                'userId': 0,
+                'userName': '',
                 'title': '',
                 'detail': '',
                 'sendDt': '2024-02-22',

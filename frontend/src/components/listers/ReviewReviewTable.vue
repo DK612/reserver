@@ -67,7 +67,7 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "userId", value: "userId" },
+                    { text: "userName", value: "userName" },
                     { text: "rodgingId", value: "rodgingId" },
                     { text: "rating", value: "rating" },
                     { text: "detail", value: "detail" },
@@ -88,7 +88,7 @@
             this.values = temp.data._embedded.reviews;
 
             this.newValue = {
-                'userId': 0,
+                'userName': '',
                 'rodgingId': 0,
                 'rating': 0,
                 'detail': '',

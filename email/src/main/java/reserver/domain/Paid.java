@@ -10,7 +10,7 @@ import reserver.infra.AbstractEvent;
 public class Paid extends AbstractEvent {
 
     private Long id;
-    private Long userId;
+    private String userName;
     private Long reservationId;
     private Object amount;
     private Date payDt;

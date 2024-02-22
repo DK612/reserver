@@ -109,7 +109,7 @@
             me.values = temp.data._embedded.reservations;
             
             me.newValue = {
-                'userId': 0,
+                'userName': '',
                 'lodgingId': 0,
                 'pricePerDay': 0,
                 'startDt': '2024-02-22',
