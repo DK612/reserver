@@ -49,7 +49,7 @@ public class Payment {
     public static void pay(Reserved reserved) {
         
         Payment payment = new Payment();
-        payment.setUserId(reserved.getUserId());
+        payment.setUserName(reserved.getUserName());
         payment.setReservationId(reserved.getId());
         Long differenceInMillis = reserved.getEndDt().getTime() - reserved.getStartDt().getTime();
         Long days = (differenceInMillis / (24 * 60 * 60 * 1000L)) % 365;
@@ -62,7 +62,7 @@ public class Payment {
     public static void refund(ReservationCanceled reservationCanceled) {
         
         Payment payment = new Payment();
-        payment.setUserId(reservationCanceled.getUserId());
+        payment.setUserName(reservationCanceled.getUserName());
         payment.setReservationId(reservationCanceled.getId());
         Long differenceInMillis = reservationCanceled.getEndDt().getTime() - reservationCanceled.getStartDt().getTime();
         Long days = (differenceInMillis / (24 * 60 * 60 * 1000L)) % 365;

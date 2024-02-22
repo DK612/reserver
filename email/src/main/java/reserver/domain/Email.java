@@ -52,9 +52,9 @@ public class Email {
     public static void sendReviewRemindMail(CheckedOut checkedOut) {
         //implement business logic here:
         Email email = new Email();
-        email.setUserId(checkedOut.getUserId());
+        email.setUserName(checkedOut.getUserName());
         email.setTitle("Please write your review.");
-        email.setDetail("Hi " + checkedOut.getUserId() + " Please write your review.");
+        email.setDetail("Hi " + checkedOut.getUserName() + " Please write your review.");
         email.setSendDt(new Date());
         repository().save(email);
 
@@ -70,9 +70,9 @@ public class Email {
         //implement business logic here:
 
         Email email = new Email();
-        email.setUserId(paymentCanceled.getUserId());
+        email.setUserName(paymentCanceled.getUserName());
         email.setTitle("Your reservation is canceled completely.");
-        email.setDetail("Hi " + paymentCanceled.getUserId() + " Your reservation is canceled completely.");
+        email.setDetail("Hi " + paymentCanceled.getUserName() + " Your reservation is canceled completely.");
         email.setSendDt(new Date());
         repository().save(email);
 
@@ -85,9 +85,9 @@ public class Email {
         //implement business logic here:
 
         Email email = new Email();
-        email.setUserId(paid.getUserId());
+        email.setUserName(paid.getUserName());
         email.setTitle("Your reservation is booked.");
-        email.setDetail("Hi " + paid.getUserId() + " Your reservation is booked.");
+        email.setDetail("Hi " + paid.getUserName() + " Your reservation is booked.");
         email.setSendDt(new Date());
         repository().save(email);
 
