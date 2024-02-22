@@ -52,7 +52,7 @@ mvn spring-boot:run
 ```
 - email
 ```
- http :8088/alerts id="id" userId="userId" title="title" detail="detail" alertDt="alertDt" 
+ http :8088/emails id="id" userId="userId" title="title" detail="detail" sendDt="sendDt" 
 ```
 
 

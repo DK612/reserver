@@ -53,9 +53,6 @@ public class Reservation {
         checkedIn.publishAfterCommit();
     }
 
-    @PreUpdate
-    public void onPreUpdate() {}
-
     public static ReservationRepository repository() {
         ReservationRepository reservationRepository = ReservationApplication.applicationContext.getBean(
             ReservationRepository.class
