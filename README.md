@@ -44,7 +44,7 @@ mvn spring-boot:run
 ```
 - reservation
 ```
- http :8088/reservations id="id" userId="userId" lodgingId="lodgingId" pricePerDay="pricePerDay" startDt="startDt" endDt="endDt" isChecked="isChecked" 
+ http :8088/reservations id="id" userId="userId" lodgingId="lodgingId" pricePerDay="pricePerDay" startDt="startDt" endDt="endDt" isChecked="isChecked" isCanceled="isCanceled" 
 ```
 - payment
 ```

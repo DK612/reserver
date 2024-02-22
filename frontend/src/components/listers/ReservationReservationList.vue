@@ -47,6 +47,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -57,6 +58,7 @@
                             [ StartDt :  {{data.startDt }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ EndDt :  {{data.endDt }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ IsChecked :  {{data.isChecked }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ IsCanceled :  {{data.isCanceled }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -130,6 +132,7 @@
                 'startDt': '2024-02-22',
                 'endDt': '2024-02-22',
                 'isChecked': false,
+                'isCanceled': false,
             }
         },
         methods: {

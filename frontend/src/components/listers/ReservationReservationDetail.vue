@@ -23,6 +23,9 @@
             <div>
                 <Boolean label="IsChecked" v-model="item.isChecked" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Boolean label="IsCanceled" v-model="item.isCanceled" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

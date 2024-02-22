@@ -22,6 +22,7 @@
             <Date label="StartDt" v-model="value.startDt" :editMode="editMode" :inputUI="''"/>
             <Date label="EndDt" v-model="value.endDt" :editMode="editMode" :inputUI="''"/>
             <Boolean label="IsChecked" v-model="value.isChecked" :editMode="editMode" :inputUI="''"/>
+            <Boolean label="IsCanceled" v-model="value.isCanceled" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>

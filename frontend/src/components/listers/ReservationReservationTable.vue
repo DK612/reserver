@@ -73,6 +73,7 @@
                     { text: "startDt", value: "startDt" },
                     { text: "endDt", value: "endDt" },
                     { text: "isChecked", value: "isChecked" },
+                    { text: "isCanceled", value: "isCanceled" },
                 ],
             reservation : [],
             newValue: {},
@@ -96,6 +97,7 @@
                 'startDt': '2024-02-22',
                 'endDt': '2024-02-22',
                 'isChecked': false,
+                'isCanceled': false,
             }
         },
         methods: {

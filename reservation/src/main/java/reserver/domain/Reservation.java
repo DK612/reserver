@@ -33,6 +33,8 @@ public class Reservation {
 
     private Boolean isChecked;
 
+    private Boolean isCanceled;
+
     @PostPersist
     public void onPostPersist() {
         Reserved reserved = new Reserved(this);
@@ -41,6 +43,9 @@ public class Reservation {
 
     @PostUpdate
     public void onPostUpdate() {
+        ReservationCanceled reservationCanceled = new ReservationCanceled(this);
+        reservationCanceled.publishAfterCommit();
+
         CheckedOut checkedOut = new CheckedOut(this);
         checkedOut.publishAfterCommit();
 
@@ -48,11 +53,8 @@ public class Reservation {
         checkedIn.publishAfterCommit();
     }
 
-    @PostRemove
-    public void onPostRemove() {
-        ReservationCanceled reservationCanceled = new ReservationCanceled(this);
-        reservationCanceled.publishAfterCommit();
-    }
+    @PreUpdate
+    public void onPreUpdate() {}
 
     public static ReservationRepository repository() {
         ReservationRepository reservationRepository = ReservationApplication.applicationContext.getBean(

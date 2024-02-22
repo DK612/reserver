@@ -115,6 +115,7 @@
                 'startDt': '2024-02-22',
                 'endDt': '2024-02-22',
                 'isChecked': false,
+                'isCanceled': false,
             }
         },
         methods:{

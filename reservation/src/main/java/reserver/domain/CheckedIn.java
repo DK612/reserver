@@ -12,6 +12,7 @@ import reserver.infra.AbstractEvent;
 public class CheckedIn extends AbstractEvent {
 
     private Long id;
+    private Long userId;
     private Boolean isChecked;
 
     public CheckedIn(Reservation aggregate) {
