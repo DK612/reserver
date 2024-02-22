@@ -7,19 +7,19 @@
 
         <v-card-text>
             <div>
-                <String label="LodgingName" v-model="item.lodgingName" :editMode="editMode" @change="change" />
+                <Number label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Date label="StartDt" v-model="item.startDt" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <Date label="EndDt" v-model="item.endDt" :editMode="editMode" @change="change" />
+                <Number label="ReservationId" v-model="item.reservationId" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="Amount" v-model="item.amount" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Date label="PayDt" v-model="item.payDt" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Date label="RefundDt" v-model="item.refundDt" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
     </v-card>

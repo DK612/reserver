@@ -22,10 +22,12 @@
         data: () => ({
             headers: [
                 { text: "id", value: "id" },
-                { text: "lodgingName", value: "lodgingName" },
-                { text: "userName", value: "userName" },
+                { text: "userId", value: "userId" },
+                { text: "lodgingId", value: "lodgingId" },
                 { text: "startDt", value: "startDt" },
                 { text: "endDt", value: "endDt" },
+                { text: "isChecked", value: "isChecked" },
+                { text: "pricePerDay", value: "pricePerDay" },
             ],
             reservationList : [],
         }),

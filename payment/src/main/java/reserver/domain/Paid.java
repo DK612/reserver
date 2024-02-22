@@ -17,6 +17,7 @@ public class Paid extends AbstractEvent {
     private Long reservationId;
     private BigDecimal amount;
     private Date payDt;
+    private Date refundDt;
 
     public Paid(Payment aggregate) {
         super(aggregate);

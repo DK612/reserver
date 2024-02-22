@@ -14,4 +14,5 @@ public class PaymentCanceled extends AbstractEvent {
     private Long reservationId;
     private Object amount;
     private Date payDt;
+    private Date refundDt;
 }

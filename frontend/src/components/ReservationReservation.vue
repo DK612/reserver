@@ -54,13 +54,6 @@
                     text
                     @click="save"
                 >
-                    CheckIn
-                </v-btn>
-                <v-btn
-                    color="primary"
-                    text
-                    @click="save"
-                >
                     CheckOut
                 </v-btn>
                 <v-btn

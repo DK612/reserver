@@ -12,6 +12,11 @@ import reserver.infra.AbstractEvent;
 public class LodgingRegistered extends AbstractEvent {
 
     private Long id;
+    private String name;
+    private String address;
+    private String owner;
+    private Long pricePerDay;
+    private Integer rating;
 
     public LodgingRegistered(Lodging aggregate) {
         super(aggregate);

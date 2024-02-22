@@ -45,6 +45,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -53,6 +54,7 @@
                             [ ReservationId :  {{data.reservationId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Amount :  {{data.amount }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PayDt :  {{data.payDt }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ RefundDt :  {{data.refundDt }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -123,7 +125,8 @@
                 'userId': 0,
                 'reservationId': 0,
                 'amount': '',
-                'payDt': '2024-02-21',
+                'payDt': '2024-02-22',
+                'refundDt': '2024-02-22',
             }
         },
         methods: {

@@ -15,6 +15,9 @@
             <div>
                 <Date label="PayDt" v-model="item.payDt" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Date label="RefundDt" v-model="item.refundDt" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

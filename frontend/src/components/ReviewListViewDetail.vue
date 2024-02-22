@@ -2,18 +2,18 @@
 
     <v-card outlined>
         <v-card-title>
-            LodgingList # {{$route.params.id }}
+            ReviewList # {{$route.params.id }}
         </v-card-title>
 
         <v-card-text>
             <div>
-                <String label="Name" v-model="item.name" :editMode="editMode" @change="change" />
+                <String label="UserName" v-model="item.userName" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="Address" v-model="item.address" :editMode="editMode" @change="change" />
+                <String label="RodgingName" v-model="item.rodgingName" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="PricePerDay" v-model="item.pricePerDay" :editMode="editMode" @change="change" />
+                <String label="Detail" v-model="item.detail" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="Rating" v-model="item.rating" :editMode="editMode" @change="change" />
@@ -27,7 +27,7 @@
   const axios = require('axios').default;
 
   export default {
-    name: 'LodgingListViewDetail',
+    name: 'ReviewListViewDetail',
     props: {
       value: Object,
     },
@@ -36,7 +36,7 @@
     }),
     async created() {
       var params = this.$route.params;
-      var temp = await axios.get(axios.fixUrl('/lodgingLists/' + params.id))
+      var temp = await axios.get(axios.fixUrl('/reviewLists/' + params.id))
 
       this.item = temp.data;
 
