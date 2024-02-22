@@ -7,16 +7,16 @@
 
         <v-card-text>
             <div>
-                <String label="UserName" v-model="item.userName" :editMode="editMode" @change="change" />
+                <Number label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="RodgingName" v-model="item.rodgingName" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <String label="Detail" v-model="item.detail" :editMode="editMode" @change="change" />
+                <Number label="LodgingId" v-model="item.lodgingId" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="Rating" v-model="item.rating" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="Detail" v-model="item.detail" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
     </v-card>
