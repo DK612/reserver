@@ -20,6 +20,7 @@
             <Number label="ReservationId" v-model="value.reservationId" :editMode="editMode" :inputUI="''"/>
             <BigDecimal offline label="Amount" v-model="value.amount" :editMode="editMode" @change="change"/>
             <Date label="PayDt" v-model="value.payDt" :editMode="editMode" :inputUI="''"/>
+            <Date label="RefundDt" v-model="value.refundDt" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>

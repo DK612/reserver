@@ -112,7 +112,8 @@
                 'userId': 0,
                 'reservationId': 0,
                 'amount': '',
-                'payDt': '2024-02-21',
+                'payDt': '2024-02-22',
+                'refundDt': '2024-02-22',
             }
         },
         methods:{

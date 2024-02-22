@@ -28,6 +28,8 @@ public class Payment {
 
     private Date payDt;
 
+    private Date refundDt;
+
     @PostPersist
     public void onPostPersist() {
         Paid paid = new Paid(this);

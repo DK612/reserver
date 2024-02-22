@@ -2,7 +2,7 @@
 
     <v-data-table
         :headers="headers"
-        :items="lodgingList"
+        :items="reviewList"
         :items-per-page="5"
         class="elevation-1"
     ></v-data-table>
@@ -13,7 +13,7 @@
     const axios = require('axios').default;
 
     export default {
-        name: 'LodgingListView',
+        name: 'ReviewListView',
         props: {
             value: Object,
             editMode: Boolean,
@@ -22,19 +22,19 @@
         data: () => ({
             headers: [
                 { text: "id", value: "id" },
-                { text: "name", value: "name" },
-                { text: "address", value: "address" },
-                { text: "pricePerDay", value: "pricePerDay" },
+                { text: "userName", value: "userName" },
+                { text: "rodgingName", value: "rodgingName" },
+                { text: "detail", value: "detail" },
                 { text: "rating", value: "rating" },
             ],
-            lodgingList : [],
+            reviewList : [],
         }),
           async created() {
-            var temp = await axios.get(axios.fixUrl('/lodgingLists'))
+            var temp = await axios.get(axios.fixUrl('/reviewLists'))
 
-            temp.data._embedded.lodgingLists.map(obj => obj.id=obj._links.self.href.split("/")[obj._links.self.href.split("/").length - 1])
+            temp.data._embedded.reviewLists.map(obj => obj.id=obj._links.self.href.split("/")[obj._links.self.href.split("/").length - 1])
 
-            this.lodgingList = temp.data._embedded.lodgingLists;
+            this.reviewList = temp.data._embedded.reviewLists;
         },
         methods: {
         }

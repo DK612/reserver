@@ -48,7 +48,7 @@ mvn spring-boot:run
 ```
 - payment
 ```
- http :8088/payments id="id" userId="userId" reservationId="reservationId" amount="amount" payDt="payDt" 
+ http :8088/payments id="id" userId="userId" reservationId="reservationId" amount="amount" payDt="payDt" refundDt="refundDt" 
 ```
 - email
 ```

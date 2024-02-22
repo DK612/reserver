@@ -22,11 +22,11 @@
         data: () => ({
             headers: [
                 { text: "id", value: "id" },
-                { text: "lodgingName", value: "lodgingName" },
-                { text: "startDt", value: "startDt" },
-                { text: "endDt", value: "endDt" },
+                { text: "userId", value: "userId" },
+                { text: "reservationId", value: "reservationId" },
                 { text: "amount", value: "amount" },
                 { text: "payDt", value: "payDt" },
+                { text: "refundDt", value: "refundDt" },
             ],
             paymentList : [],
         }),

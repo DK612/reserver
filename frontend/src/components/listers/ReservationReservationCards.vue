@@ -112,8 +112,8 @@
                 'userId': 0,
                 'lodgingId': 0,
                 'pricePerDay': 0,
-                'startDt': '2024-02-21',
-                'endDt': '2024-02-21',
+                'startDt': '2024-02-22',
+                'endDt': '2024-02-22',
                 'isChecked': false,
             }
         },

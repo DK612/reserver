@@ -12,6 +12,7 @@ import reserver.infra.AbstractEvent;
 public class RatingUpdated extends AbstractEvent {
 
     private Long id;
+    private Integer rating;
 
     public RatingUpdated(Lodging aggregate) {
         super(aggregate);
