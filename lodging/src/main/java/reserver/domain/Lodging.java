@@ -34,11 +34,14 @@ public class Lodging {
 
     @PostPersist
     public void onPostPersist() {
-        RatingUpdated ratingUpdated = new RatingUpdated(this);
-        ratingUpdated.publishAfterCommit();
-
         LodgingRegistered lodgingRegistered = new LodgingRegistered(this);
         lodgingRegistered.publishAfterCommit();
+    }
+
+    @PostUpdate
+    public void onPostUpdate() {
+        RatingUpdated ratingUpdated = new RatingUpdated(this);
+        ratingUpdated.publishAfterCommit();
     }
 
     public static LodgingRepository repository() {
@@ -58,9 +61,6 @@ public class Lodging {
             lodging.reviewCount = countOrigin + 1;
             lodging.rating = Math.round( (totalRateOrigin + reviewRegistered.getRating()) / lodging.reviewCount);
             repository().save(lodging);
-
-            RatingUpdated ratingUpdated = new RatingUpdated(lodging);
-            ratingUpdated.publishAfterCommit();
         });
 
         /** Example 1:  new item 

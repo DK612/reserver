@@ -20,7 +20,7 @@ public class Review {
 
     private String userName;
 
-    private Long rodgingId;
+    private Long lodgingId;
 
     private Integer rating;
 
